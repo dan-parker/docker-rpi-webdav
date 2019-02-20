@@ -38,4 +38,5 @@ MIT / BSD
 ## Author Information
 
 [Jeroen Geusebroek](http://jeroengeusebroek.nl/)
+
 [Dung Tri LE]
