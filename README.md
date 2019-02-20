@@ -39,4 +39,4 @@ MIT / BSD
 
 [Jeroen Geusebroek](http://jeroengeusebroek.nl/)
 
-[Dung Tri LE]
+Dung Tri LE
