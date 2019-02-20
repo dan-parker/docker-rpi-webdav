@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Jeroen Geusebroek <me@jeroengeusebroek.nl>
+MAINTAINER Dung Tri LE <geekwhynot@gmail.com>
 
 ENV PACKAGE_LIST="lighttpd lighttpd-mod_webdav lighttpd-mod_auth" \
     REFRESHED_AT='2016-12-26'
