@@ -12,6 +12,7 @@ READWRITE=${READWRITE:=false}
 if ! id -u "${USERNAME}" >/dev/null 2>&1; then
 	addgroup -g ${USER_GID:=2222} ${GROUP}
 	adduser -G ${GROUP} -D -H -u ${USER_UID:=2222} ${USERNAME}
+	chown webdav:web
 fi
 
 chown webdav /var/log/lighttpd
@@ -23,14 +24,8 @@ fi
 if [ "$READWRITE" == "true" ]; then
 	sed -i "s/is-readonly = \"\\w*\"/is-readonly = \"disable\"/" /etc/lighttpd/webdav.conf
 else
-	sed -i "s/is-readonly = \"\\w*\"/is-readonly = \"enable\"/" /etc/lighttpd/webdav.conf
+  sed -i "s/is-readonly = \"\\w*\"/is-readonly = \"enable\"/" /etc/lighttpd/webdav.conf
 fi
-
-if [ "$BROWSABLE" == "true" ]; then                                                           
-        sed -i "s/dir-listing = \"\\w*\"/dir-listing = \"enable\"/" /etc/lighttpd/webdav.conf
-else                                                                                          
-	sed -i "s/dir-listing = \"\\w*\"/dir-listing = \"disable\"/" /etc/lighttpd/webdav.conf       
-fi                                                                                            
 
 if [ ! -f /config/htpasswd ]; then
 	cp /etc/lighttpd/htpasswd /config/htpasswd
