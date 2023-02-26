@@ -6,7 +6,7 @@ A tiny image running [gliderlabs/docker-alpine](https://github.com/gliderlabs/do
 ## Usage
 
 	docker run --restart=always -d
-		-p 0.0.0.0:80:80 \
+		-p 0.0.0.0:443:443 \
 		--hostname=webdav \
 		--name=webdav \
 		-v /<host_directory_to_share>:/webdav \
@@ -23,8 +23,8 @@ You can also provide a list of IP's in the form of a regular expression which ar
 
 ## Optional environment variables
 
-* `USER_UID` User ID of the lighttpd daemon account (default: 2222).
-* `USER_GID` Group ID of the lighttpd daemon account (default: 2222).
+* `USER_UID` User ID of the lighttpd daemon account (default: 1000).
+* `USER_GID` Group ID of the lighttpd daemon account (default: 1000).
 * `WHITELIST` Regexp for a list of IP's (default: none). Example: `-e WHITELIST='192.168.1.*|172.16.1.2'`
 * `READWRITE` When this is set to `true`, the WebDAV share can be written to (default: False). Example: `-e READWRITE=true`
 * `BROWSABLE` When this is set to `true`, enable directory listings globally on the WebDAV share (default: False). Example: `-e BROWSABLE=true`
