@@ -1,5 +1,5 @@
 [![](https://images.microbadger.com/badges/image/jgeusebroek/webdav.svg)](https://microbadger.com/images/jgeusebroek/webdav "Get your own image badge on microbadger.com")
-# Docker WebDAV image
+# Docker WebDAV with SSL image
 
 A tiny image running [gliderlabs/docker-alpine](https://github.com/gliderlabs/docker-alpine) Linux and [Lighttpd](https://www.lighttpd.net/).
 
@@ -10,6 +10,7 @@ A tiny image running [gliderlabs/docker-alpine](https://github.com/gliderlabs/do
 		--hostname=webdav \
 		--name=webdav \
 		-v /<host_directory_to_share>:/webdav \
+		-v /path/to/appdata/config:/config \
 		jgeusebroek/webdav
 
 By default the WebDAV server is password protected with user `webdav` and password `vadbew` which obviously isn't really secure.
