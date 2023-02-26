@@ -1,5 +1,4 @@
 FROM arm32v7/alpine:latest
-ARG arm64
 MAINTAINER Dan Parker
 
 ENV PACKAGE_LIST="lighttpd lighttpd-mod_webdav lighttpd-mod_auth openssl" \
