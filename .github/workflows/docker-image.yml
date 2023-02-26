@@ -23,4 +23,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag viperlord/docker-rpi-webdav:$(date +%s)
     - name: docker push
-      run: docker push ${{$DOCKER_USER}}/docker-rpi-webdav
+      run: docker push ${{secrets.DOCKER_USER}}/docker-rpi-webdav
