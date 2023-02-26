@@ -1,5 +1,5 @@
 FROM alpine:latest
-MAINTAINER Dung Tri LE <geekwhynot@gmail.com>
+MAINTAINER Dan Parker
 
 ENV PACKAGE_LIST="lighttpd lighttpd-mod_webdav lighttpd-mod_auth lighttpd-mod_openssl" \
     REFRESHED_AT='2016-12-26'
