@@ -27,9 +27,9 @@ else
 fi
 
 if [ "$BROWSABLE" == "true" ]; then                                                           
-        sed -i "s/dir-listing = \"\\w*\"/dir-listing = \"enable\"/" /etc/lighttpd/webdav.conf
+        sed -i "s/dir-listing.activate = \"\\w*\"/dir-listing.activate = \"enable\"/" /etc/lighttpd/webdav.conf
 else                                                                                          
-	sed -i "s/dir-listing = \"\\w*\"/dir-listing = \"disable\"/" /etc/lighttpd/webdav.conf       
+	sed -i "s/dir-listing.activate = \"\\w*\"/dir-listing.activate = \"disable\"/" /etc/lighttpd/webdav.conf       
 fi                                                                                            
 
 if [ ! -f /config/htpasswd ]; then
