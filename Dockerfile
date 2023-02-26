@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM arm32v7/alpine:latest
 ARG arm64
 MAINTAINER Dan Parker
 
