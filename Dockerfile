@@ -1,7 +1,7 @@
 FROM alpine:latest
 MAINTAINER Dan Parker
 
-ENV PACKAGE_LIST="lighttpd lighttpd-mod_webdav lighttpd-mod_auth lighttpd-mod_openssl" \
+ENV PACKAGE_LIST="lighttpd lighttpd-mod_webdav lighttpd-mod_auth openssl" \
     REFRESHED_AT='2016-12-26'
 
 RUN apk add --no-cache ${PACKAGE_LIST}
